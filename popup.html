@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forgor</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-left">
+        <h1 class="logo">forgor</h1>
+        <a href="https://buymeacoffee.com/nghialxx" target="_blank" class="donate-btn" title="Support the developer">
+          <span class="material-symbols-outlined">favorite</span>
+        </a>
+      </div>
+      <button id="settingsBtn" class="icon-btn" title="Settings">
+        <span class="material-symbols-outlined">settings</span>
+      </button>
+    </div>
+
+    <div class="current-tab-info">
+      <div class="tab-title">
+        <span class="material-symbols-outlined">tab</span>
+        <span id="currentTabTitle">Loading...</span>
+      </div>
+      <div class="tab-actions">
+        <label class="toggle-switch" title="Enable/disable clipboard saving for this tab">
+          <input type="checkbox" id="tabEnabledToggle" checked>
+          <span class="toggle-slider"></span>
+        </label>
+        <button id="tabSettingsBtn" class="icon-btn-small" title="Tab settings">
+          <span class="material-symbols-outlined">tune</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="clips-container">
+      <div id="pinnedClips" class="pinned-section"></div>
+      <div id="clipsList" class="clips-list"></div>
+    </div>
+
+    <div class="empty-state" id="emptyState">
+      <span class="material-symbols-outlined empty-icon">content_paste_off</span>
+      <p>No clipboard items for this tab yet</p>
+      <p class="hint">Copy text on this page to save it</p>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settingsModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Global Settings</h2>
+        <button class="close-btn">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label class="toggle-label">
+          <input type="checkbox" id="autoCapture">
+          <span>Enable Auto Capture</span>
+        </label>
+
+        <div class="section">
+          <h3>All Tabs</h3>
+          <div id="allTabsList" class="all-tabs-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Settings Modal -->
+  <div id="tabSettingsModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Tab Settings</h2>
+        <button class="close-btn">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-info-display">
+          <span class="material-symbols-outlined">tab</span>
+          <span id="settingsTabTitle">Current Tab</span>
+        </div>
+
+        <label>Retention Type:
+          <select id="retentionType">
+            <option value="count">By Count</option>
+            <option value="time">By Time</option>
+          </select>
+        </label>
+
+        <div id="countSetting" class="setting-group">
+          <label>Max Items:
+            <input type="number" id="maxCount" min="1" max="1000" value="50">
+          </label>
+        </div>
+
+        <div id="timeSetting" class="setting-group" style="display: none;">
+          <label>Keep for:
+            <div class="time-input-group">
+              <input type="number" id="retentionValue" min="1" max="999" value="60">
+              <select id="retentionUnit">
+                <option value="minutes">Minutes</option>
+                <option value="hours">Hours</option>
+              </select>
+            </div>
+          </label>
+        </div>
+
+        <div class="button-group">
+          <button id="saveTabSettings" class="btn-primary">Save</button>
+          <button id="clearTabClips" class="btn-danger">Clear All Clips</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
