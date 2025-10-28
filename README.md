@@ -39,19 +39,6 @@
 
 ---
 
-## 📸 Screenshots
-
-![forgor Main Interface](screenshots/main.png)
-*Clean, intuitive interface with tab-based organization*
-
-![Context Menu](screenshots/context-menu.png)
-*Right-click integration for quick saves*
-
-![Settings](screenshots/settings.png)
-*Flexible retention policies per tab*
-
----
-
 ## 🚀 Installation
 
 ### From Chrome Web Store (Recommended)
@@ -109,73 +96,6 @@ Use the toggle switch next to the tab name to quickly enable/disable clipboard s
 
 ---
 
-## 🛠️ Technical Details
-
-### Built With
-- **Manifest V3** - Latest Chrome extension standard
-- **Vanilla JavaScript** - No framework dependencies
-- **Material Symbols** - Google's icon library
-- **Canvas API** - For image compression
-
-### Storage Limits
-- Chrome's `storage.local` has ~10MB limit
-- Images compressed to ~100-200KB each
-- Average capacity: 50-100 mixed items per tab
-
-### Permissions Required
-- `storage` - Save clipboard history locally
-- `tabs` - Organize by tab
-- `clipboardRead` / `clipboardWrite` - Access clipboard
-- `contextMenus` - Right-click integration
-- `<all_urls>` - Monitor clipboard on all pages
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
-3. **Commit your changes** (`git commit -m 'Add amazing feature'`)
-4. **Push to the branch** (`git push origin feature/amazing-feature`)
-5. **Open a Pull Request**
-
-### Development Setup
-```bash
-# Clone the repo
-git clone https://github.com/yourusername/forgor.git
-cd forgor/chrome-extension
-
-# Load in Chrome (chrome://extensions/)
-# Enable Developer mode → Load unpacked → Select folder
-
-# Make changes and reload extension to test
-```
-
----
-
-## 🐛 Known Issues
-
-- Some websites (like Chrome Web Store, Google Fonts) restrict extensions
-- "Copy image" from context menu may not work on all images due to CORS
-- Very large images may still exceed storage limits despite compression
-
----
-
-## 📝 Changelog
-
-### Version 1.0.0 (Initial Release)
-- ✨ Tab-based clipboard organization
-- 📋 Text, link, and image support
-- 🗜️ Automatic image compression
-- 📌 Pin/delete functionality
-- ⚙️ Customizable retention policies
-- 🎨 Clean, modern UI with cyan theme
-- 🔐 100% local storage, privacy-focused
-
----
-
 ## 💖 Support
 
 If you find forgor useful, consider supporting its development:
@@ -187,21 +107,6 @@ If you find forgor useful, consider supporting its development:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👨‍💻 Author
-
-**nghialxx**
-- Buy Me a Coffee: [@nghialxx](https://buymeacoffee.com/nghialxx)
-
----
-
-## 🙏 Acknowledgments
-
-- Material Symbols by Google
-- Inspired by the need for better clipboard management
-- Thanks to all contributors and users!
 
 ---
 
