@@ -1,4 +1,4 @@
-# forgor 🗂️
+# forgor 
 
 > Never forget what you copied - A smart, tab-based clipboard manager for Chrome
 
@@ -14,14 +14,11 @@
 ### 🎯 Core Functionality
 - **Tab-Based Organization** - Each Chrome tab has its own clipboard history
 - **Multi-Format Support** - Save text, links, and images automatically
-- **Smart Detection** - Automatically identifies and categorizes content types
-- **Image Compression** - Reduces storage usage while maintaining quality (max 800x800px, 70% quality)
 
 ### 🎨 Clipboard Management
 - **Pin Important Items** - Keep frequently used items at the top
 - **Quick Copy** - Click any item to copy it back to clipboard
 - **Real-Time Updates** - Popup refreshes automatically when new content is saved
-- **Search & Filter** - Easily find what you need
 
 ### ⚙️ Customization
 - **Retention Policies** - Configure per-tab retention by count or time
@@ -109,8 +106,3 @@ If you find forgor useful, consider supporting its development:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-<p align="center">Made with 💙 by nghialxx</p>
-<p align="center">
-  <a href="#forgor-️">Back to top ↑</a>
-</p>
